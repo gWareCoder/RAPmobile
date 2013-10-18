@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Kendo UI DataViz</title>
+        <title>TNS Mobile Application</title>
         <meta charset="UTF-8" />
 
         <link href="kendo/styles/kendo.dataviz.mobile.min.css" rel="stylesheet" />
 
-        <!--Once the final theme is chosen the redundant css reference should removed-->
-        <link href="kendo/styles/kendo.dataviz.flat.min.css" rel="stylesheet" />
         <link href="kendo/styles/kendo.dataviz.silver.min.css" rel="stylesheet" />
 
         <link href="styles/main.css" rel="stylesheet" />
@@ -24,39 +22,84 @@
     </head>
 
     <body>
-        <!--Pie chart-->
-        <div id="tabstrip-pie-chart"  
+        <!--Dashboard-->
+        <div id="tabstrip-dashboard"  
              data-role="view" 
-             data-title="Pie Chart" 
-             data-show="app.pieChart.createPieChart" 
-             data-hide="app.pieChart.unbindResizeEvent" 
-             data-stretch="true">
+             data-title="TNS Dashboard" 
+            >
 
-            <div id="pie-chart"></div>
-
+			<ul class="wrapper">
+    <li class="redbox">Overall<h2>
+        33%
+        </h2>
+        <h3>
+        22/33
+        </h3>
+     </li>
+    
+    <li class="greenbox">NPS<h2>
+        33%
+        </h2>
+        <h3>
+        22/33
+        </h3>
+     </li>    
+    <li class="yellowbox">Response Rate<h2>
+        33%
+        </h2>
+        <h3>
+        22/33
+        </h3>
+     </li>    
+    <li class="greenbox">Hot Alerts<h2>
+        33%
+        </h2>
+        <h3>
+        22/33
+        </h3>
+     </li>    <li class="redbox">Sentiment<h2>
+        33%
+        </h2>
+        <h3>
+        22/33
+        </h3>
+     </li>    <li class="yellowbox">Overall<h2>
+        33%
+        </h2>
+        <h3>
+        22/33
+        </h3>
+     </li>    
+    
+            </ul>
+        
         </div>
+ 
 
-        <!--Gauge-->
-        <div id="tabstrip-gauge"
+        <!--Hot Alerts/Responses-->
+        <div id="tabstrip-hotalerts"
              data-role="view" 
-             data-title="Gauge" 
+             data-title="Hot Alerts/Responses" 
              data-show="app.gauge.createGauge" 
              data-hide="app.gauge.unbindResizeEvent" 
              data-stretch="true">
 
             <div id="gauge-wrap" data-role="content">
-                <div id="gauge"></div>
+                
                 <div class="widget-content">
                     <input id="gauge-value" type="range">
                 </div>
             </div>
+            
+            
+            
 
         </div>
 
-        <!--QR code-->
-        <div id="tabstrip-qrcode"  
+        <!--Verbatims-->
+        <div id="tabstrip-verbatims"  
              data-role="view" 
-             data-title="QR Code" 
+             data-title="Verbatims" 
              data-show="app.qrcode.createQRCode">
 
             <div data-role="content">
@@ -69,10 +112,10 @@
 
         </div>
 
-        <!--Stock chart-->
-        <div id="tabstrip-stock-chart"
+        <!--Settings-->
+        <div id="tabstrip-settings"
              data-role="view" 
-             data-title="Stock Chart"
+             data-title="Settings"
              data-show="app.stockChart.createStockChart" 
              data-hide="app.stockChart.unbindResizeEvent"
              data-stretch="true">
@@ -80,6 +123,13 @@
             <div id="stock-chart"></div>
 
         </div>
+        
+        
+
+
+
+        
+        
 
         <!--Layout-->
         <div data-role="layout" 
@@ -88,18 +138,19 @@
             <!--Header-->
             <div data-role="header">
                 <div data-role="navbar">
-                    <a data-align="right" data-role="button" data-click="app.changeSkin">Flat</a>
-                    <span data-role="view-title"></span>
+                    <span data-role="view-title">Dashboard</span>
                 </div>
             </div>
 
             <!--Footer-->
             <div data-role="footer">
                 <div data-role="tabstrip">
-                    <a href="#tabstrip-pie-chart" data-icon="globe">Pie Chart</a>
-                    <a href="#tabstrip-gauge" data-icon="recents">Gauge</a>
-                    <a href="#tabstrip-qrcode" data-icon="camera">QR Code</a>
-                    <a href="#tabstrip-stock-chart" data-icon="featured">Stock Chart</a>
+
+                    <a href="views/dashboardView.html" data-icon="home">Dashboard</a>
+                    <a href="views/hotalertsView.html" data-icon="mostviewed" data-badge="4">Hot Alerts</a>
+                    <a href="views/VerbatimsView.html" data-icon="contacts" data-badge="30">Verbatims</a>
+                    <a href="views/settingsView.html" data-icon="settings">Settings</a>
+
                 </div>
             </div>
 

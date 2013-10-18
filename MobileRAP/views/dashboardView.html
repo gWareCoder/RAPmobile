@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TNS Mobile Application</title>
+        <meta charset="UTF-8" />
+
+        <link href="kendo/styles/kendo.dataviz.mobile.min.css" rel="stylesheet" />
+
+        <link href="kendo/styles/kendo.dataviz.silver.min.css" rel="stylesheet" />
+
+        <link href="styles/main.css" rel="stylesheet" />
+
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.dataviz.mobile.min.js"></script>
+        
+        
+        <script src="scripts/app/identity-provider.js"></script>
+        <script src="scripts/lib/everlive.all.min.js"></script>
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/pie-chart.js"></script>
+        <script src="scripts/gauge.js"></script>
+        <script src="scripts/qr-code.js"></script>
+        <script src="scripts/stock-chart.js"></script>
+    </head>
+
+    <body>
+        <!--Dashboard-->
+        <div id="tabstrip-dashboard"  
+             data-role="view" 
+             data-title="TNS Dashboard" 
+            >
+
+    <ul class="wrapper">
+        <li class="redbox">Overall<h2>
+            33%
+            </h2>
+            <h3>
+            22/33
+            </h3>
+         </li>
+        
+        <li class="greenbox">NPS<h2>
+            33%
+            </h2>
+            <h3>
+            22/33
+            </h3>
+         </li>    
+        <li class="yellowbox">Response Rate<h2>
+            33%
+            </h2>
+            <h3>
+            22/33
+            </h3>
+         </li>    
+        <li class="greenbox">Hot Alerts<h2>
+            33%
+            </h2>
+            <h3>
+            22/33
+            </h3>
+         </li>    <li class="redbox">Sentiment<h2>
+            33%
+            </h2>
+            <h3>
+            22/33
+            </h3>
+         </li>    <li class="yellowbox">Overall<h2>
+            33%
+            </h2>
+            <h3>
+            22/33
+            </h3>
+         </li>    
+    
+    </ul>
+        
+        </div>
+ 
+
+
+
+
+        
+        
+
+        <!--Layout-->
+        <div data-role="layout" 
+             data-id="mobile-tabstrip">
+
+            <!--Header-->
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title">TNS Dashb</span>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div data-role="footer">
+                <div data-role="tabstrip">
+                    <a href="views/dashboardView.html" data-icon="home">Dashboard</a>
+                    <a href="views/hotalertsView.html" data-icon="mostviewed" data-badge="4">Hot Alerts</a>
+                    <a href="views/VerbatimsView.html" data-icon="contacts" data-badge="30">Verbatims</a>
+                    <a href="views/settingsView.html" data-icon="settings">Settings</a>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

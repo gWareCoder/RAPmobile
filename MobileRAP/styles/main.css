@@ -42,3 +42,74 @@ body, html {
     margin:0 auto;
     top:50%;
 }
+
+.wrapper {
+    max-width: 600px;
+    height: auto;
+}
+
+
+.redbox {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+    z-index: 0;
+    margin: 2px 2px 2px -2px;
+    transition: all .15s ease-in-out;
+}
+
+
+.redbox:hover {
+    background: #9CC;
+    z-index: 100;
+    transform: scale(1.2,1.2);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+}
+
+
+.greenbox {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: green;
+    color: white;
+    z-index: 0;
+    margin: 2px 2px 2px -2px;
+    transition: all .15s ease-in-out;
+}
+
+
+.greenbox:hover {
+    background: #9CC;
+    z-index: 100;
+    transform: scale(1.2,1.2);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+}
+
+
+
+.yellowbox {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: orange;
+    color: white;
+    z-index: 0;
+    margin: 2px 2px 2px -2px;
+    transition: all .15s ease-in-out;
+}
+
+
+.yellowbox:hover {
+    background: #9CC;
+    z-index: 100;
+    transform: scale(1.2,1.2);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+}
+
+

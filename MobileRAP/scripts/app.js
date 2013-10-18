@@ -9,6 +9,19 @@
     document.addEventListener("deviceready", function () {
         application = new kendo.mobile.Application(document.body, { transition: "", layout: "mobile-tabstrip" });
     }, false);
+    
+    //Everlive RAPmobile database setting
+    var applicationSettings = {
+        emptyGuid: '00000000-0000-0000-0000-000000000000',
+        apiKey: 'CHaQZg6QUNb9T6hj'
+    };
+    
+     // initialize Everlive SDK
+    var el = new Everlive({
+        apiKey: applicationSettings.apiKey
+    });   
+    
+    
 
     //Skin change function is for the demo. On real project only one theme should be chosen.
     app.changeSkin = function (e) {
